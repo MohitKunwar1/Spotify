@@ -89,11 +89,11 @@ playSongs.forEach((element) => {
             gif.style.opacity = 1;
 
         }else{
-            playAllSongs()
             audioElement.pause();
             playBtn.classList.remove("ri-pause-circle-line")
             playBtn.classList.add("ri-play-circle-line");
             gif.style.opacity = 0;
+            playAllSongs(-1)
         }
     });
 });
