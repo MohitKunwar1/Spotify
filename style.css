@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+#main {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+/* NAVBAR */
+#nav {
+  width: 90%;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  justify-content: space-between;
+  color: white;
+  background-color: #111;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+#nav h1 {
+  font-size: 2vw;
+}
+#nav span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#nav span h3 {
+  font-size: 1.5vw;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  gap: 2vw;
+}
+.logo img {
+  width: 3vw;
+  margin-left: 2px;
+}
+.logo i {
+  color: white;
+  margin-right: 10px;
+  font-size: 1.5vw;
+}
+ul {
+  display: flex;
+}
+li {
+  display: flex;
+  margin-right: 50px;
+}
+/* Main Content */
+#container {
+  width: 80%;
+  height: 80vh;
+  background-color: #fff;
+  margin-top: 2vh;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  color: white;
+}
+.title {
+  color: aliceblue;
+  text-align: center;
+  height: max-content;
+}
+.title h2 {
+  font-size: 2.5vw;
+}
+.left {
+  position: relative;
+  width: 60%;
+  min-height: 80vh;
+  background-color: #000000ce;
+  white-space: nowrap;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.left::-webkit-scrollbar {
+  display: none;
+}
+.songslist {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #000;
+  background-color: white;
+  height: 4vw;
+  margin: 20px;
+  border-radius: 50px;
+  font-size: 1vw;
+  flex-wrap: wrap;
+}
+.songslist img {
+  width: 3vw;
+  margin-left: 20px;
+}
+.songplay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.songplay i {
+  font-size: 2vw;
+  /* margin-left: 20px; */
+}
+.right {
+  width: 40%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: seagreen;
+}
+.right .banner {
+  height: 20vw;
+  width: 20vw;
+  /* border: 2px solid rgb(180, 23, 23); */
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.songdetails {
+  height: 20vh;
+  width: 30vw;
+  /* border: 2px solid crimson; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1vw;
+}
+
+.songdetails img {
+  width: 100%;
+  height: 10vh;
+  margin-top: 30px;
+  opacity: 0;
+  transition: all ease 0.4s;
+}
+/* player */
+#player {
+  width: 90%;
+  height: 80px;
+  background-color: #111;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.icons {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.icons i {
+  color: white;
+  font-size: 40px;
+}
+#range {
+  width: 80vw;
+  cursor: pointer;
+  transition: all ease 0.1s;
+}
+
+
+@media only screen and (max-width: 600px) {
+  #nav,
+  #player {
+    width: 100%;
+  }
+  #nav h1,
+  #nav span h3,
+  .title h2,
+  .songslist,
+  .songplay i,
+  #nav i {
+    font-size: 16px; /* Adjust as needed */
+  }
+  #nav li {
+    display: none;
+  }
+  #nav img,
+  h1 {
+    margin-right: 10px;
+  }
+  #nav img {
+    width: 20px;
+  }
+  #container {
+    width: 90%;
+  }
+  .left,
+  .right {
+    width: 100%;
+  }
+  #player input {
+    width: 80%;
+  }
+  .songslist {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    height: auto;
+    border-radius: 15px;
+    font-size: 3vw;
+  }
+  .songslist img {
+    width: 20px;
+  }
+
+  .songplay {
+    gap: 10px;
+  }
+  .right .banner{
+    height: 30vw;
+    width: 30vw;
+  }
+  .songdetails{
+    font-size: 1.5vw;
+  }
+}
