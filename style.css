@@ -106,11 +106,11 @@ li {
   height: 4vw;
   margin: 20px;
   border-radius: 50px;
-  font-size: 1vw;
+  font-size: 2vw;
   flex-wrap: wrap;
 }
 .songslist img {
-  width: 3vw;
+  width: 4vw;
   margin-left: 20px;
 }
 .songplay {
@@ -120,7 +120,7 @@ li {
   gap: 20px;
 }
 .songplay i {
-  font-size: 2vw;
+  font-size: 3vw;
   /* margin-left: 20px; */
 }
 .right {
@@ -231,7 +231,7 @@ li {
     align-items: center;
     height: auto;
     border-radius: 15px;
-    font-size: 3vw;
+    font-size: 2vw;
   }
   .songslist img {
     width: 20px;
