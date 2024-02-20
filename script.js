@@ -8,20 +8,21 @@ let songList = Array.from( document.getElementsByClassName("songslist"));
 let playSongs = Array.from(document.getElementsByClassName("playsong"));
 let gif = document.querySelector(".gif");
 let songsName = document.querySelector(".name");
+let banner = document.querySelector(".bannerImage")
 let songIndex = 0;
 
 let songs = [
-    {songName: "Let me love you", filePath: "./songs/1.mp3", coverPath: "./cover/1.jpg"},
-    {songName: "High Hukku", filePath: "./songs/2.mp3", coverPath: "./cover/2.jpg"},
-    {songName: "Softly by Karan Auhjla", filePath: "./songs/3.mp3", coverPath: "./cover/3.jpg"},
-    {songName: "Let me love you", filePath: "./songs/4.mp3", coverPath: "./cover/4.jpg"},
+    {songName: "High Hukku", filePath: "./songs/1.mp3", coverPath: "./cover/1.jpg"},
+    {songName: "Softly by Karan Auhjla", filePath: "./songs/2.mp3", coverPath: "./cover/2.jpg"},
+    {songName: "Aaja Mahiya", filePath: "./songs/3.mp3", coverPath: "./cover/3.jpg"},
+    {songName: "Teri Batoon Mein Aisa", filePath: "./songs/4.mp3", coverPath: "./cover/4.jpg"},
     {songName: "Let me love you", filePath: "./songs/5.mp3", coverPath: "./cover/5.jpg"},
     {songName: "Let me love you", filePath: "./songs/6.mp3", coverPath: "./cover/6.jpg"},
     {songName: "Let me love you", filePath: "./songs/7.mp3", coverPath: "./cover/7.jpg"},
     {songName: "Let me love you", filePath: "./songs/8.mp3", coverPath: "./cover/8.jpg"},
     {songName: "Let me love you", filePath: "./songs/9.mp3", coverPath: "./cover/9.jpg"},
     {songName: "Let me love you", filePath: "./songs/10.mp3", coverPath: "./cover/10.jpg"},
-]
+ ]
 
 songList.forEach((element, i)=>{
     element.getElementsByTagName("img")[0].src = songs[i].coverPath;
@@ -29,7 +30,7 @@ songList.forEach((element, i)=>{
 });
 
 //Handling play/pause buttons of player
-playBtn.addEventListener("click", (e) => {
+playBtn.addEventListener("click", () => {
     if(audioElement.paused || audioElement.currentTime <= 0){
         audioElement.play();
         playBtn.classList.remove("ri-play-circle-line");
@@ -85,7 +86,8 @@ playSongs.forEach((element) => {
             playBtn.classList.add("ri-pause-circle-line");
             audioElement.currentTime = 0;
             audioElement.play();
-            songsName.innerHTML = songs[songIndex].songName
+            songsName.innerHTML = songs[songIndex].songName;
+            banner.src = songs[songIndex].coverPath;
             gif.style.opacity = 1;
 
         }else{

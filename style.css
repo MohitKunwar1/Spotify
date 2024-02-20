@@ -108,6 +108,7 @@ li {
   border-radius: 50px;
   font-size: 2vw;
   flex-wrap: wrap;
+  cursor: pointer;
 }
 .songslist img {
   width: 4vw;
@@ -191,7 +192,6 @@ li {
   transition: all ease 0.1s;
 }
 
-
 @media only screen and (max-width: 600px) {
   #nav,
   #player {
@@ -240,11 +240,11 @@ li {
   .songplay {
     gap: 10px;
   }
-  .right .banner{
+  .right .banner {
     height: 30vw;
     width: 30vw;
   }
-  .songdetails{
+  .songdetails {
     font-size: 1.5vw;
   }
 }
